@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gió Đồng — Xe đạp đóng tay, đi cả đời</title>
+<meta name="description" content="Landing page mẫu cho hãng xe đạp thủ công Gió Đồng. Ảnh và giá trên trang đều là ảnh mẫu / giá mẫu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Be+Vietnam+Pro:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EFE7; --paper-dark:#E9E2D4; --white:#FFFFFF;
+    --ink:#1E2A24; --muted:#5C6B62; --clay:#C75B21; --clay-dark:#9C4418; --honey:#D8A24A;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Be Vietnam Pro",sans-serif;font-size:17px;line-height:1.7}
+  img{display:block;width:100%;object-fit:cover}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  section{padding:96px 0}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--clay);margin:0 0 12px}
+  h1,h2,h3{font-family:"Playfair Display",serif;font-weight:600;margin:0}
+  h1{font-size:56px;line-height:1.15}
+  h2{font-size:40px;line-height:1.2}
+  h3{font-size:26px;line-height:1.3}
+  h2::after{content:"";display:block;width:72px;height:4px;background:var(--clay);margin-top:16px}
+  p{margin:12px 0}
+  .muted{color:var(--muted);font-size:14px}
+  .btn{display:inline-block;font-size:16px;font-weight:700;text-transform:uppercase;padding:14px 28px;border-radius:999px;text-decoration:none}
+  .btn-primary{background:var(--clay);color:#fff}
+  .btn-primary:hover{background:var(--clay-dark)}
+  .btn-ghost{border:2px solid var(--ink);color:var(--ink);background:transparent}
+  /* Header */
+  header{position:sticky;top:0;background:var(--paper);border-bottom:1px solid var(--paper-dark);z-index:10}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+  .logo{font-family:"Playfair Display",serif;font-size:26px;font-weight:700;text-decoration:none;color:var(--ink)}
+  .logo span{color:var(--clay)}
+  nav a{color:var(--ink);text-decoration:none;margin-left:20px;font-size:15px}
+  /* Hero */
+  .hero{padding:0;position:relative}
+  .hero-media{position:relative;aspect-ratio:16/9;min-height:480px}
+  .hero-media img{position:absolute;inset:0;height:100%}
+  .hero-text{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(30,42,36,.72));color:#fff;padding:64px 0 40px}
+  .hero-text .eyebrow{color:var(--honey)}
+  .hero-text p{max-width:640px}
+  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:20px}
+  .hero-actions .btn-ghost{border-color:#fff;color:#fff}
+  /* Workshop */
+  .two{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+  .two img{aspect-ratio:4/3;border:3px solid var(--honey)}
+  ol.steps{padding-left:20px}
+  ol.steps li{margin-bottom:10px}
+  /* Products */
+  #dong-xe{background:var(--paper)}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
+  .card{background:var(--white);padding:0 0 24px}
+  .card img{aspect-ratio:4/3}
+  .card-body{padding:20px 20px 0}
+  .price{color:var(--clay);font-weight:700;font-size:20px}
+  .tag{display:inline-block;border:1px solid var(--honey);color:var(--clay);font-size:13px;font-weight:700;padding:2px 10px;border-radius:999px}
+  /* Custom order */
+  .dark-section{background:var(--paper-dark)}
+  .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
+  .step{background:var(--white);padding:28px}
+  .step-num{font-family:"Playfair Display",serif;font-size:40px;color:var(--clay);line-height:1}
+  /* Journal */
+  .journal{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px}
+  .journal img{aspect-ratio:1/1}
+  .journal figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+  /* Form */
+  form{background:var(--white);padding:32px;max-width:640px;margin-top:32px}
+  label{display:block;font-weight:700;margin:16px 0 6px}
+  input,select,textarea{width:100%;padding:12px;border:1px solid var(--paper-dark);font:inherit;font-size:16px}
+  form button{margin-top:24px;border:none;cursor:pointer}
+  .note{border-left:4px solid var(--honey);padding:12px 16px;background:var(--paper);margin-top:20px}
+  footer{border-top:1px solid var(--paper-dark);padding:32px 0}
+  @media (max-width:768px){
+    body{font-size:16px}
+    section{padding:56px 0}
+    h1{font-size:40px} h2{font-size:30px} h3{font-size:22px}
+    .hero-media{aspect-ratio:4/5;min-height:0}
+    .two,.cards,.steps-grid,.journal{grid-template-columns:1fr}
+    nav{display:none}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#">Gió <span>Đồng</span></a>
+    <nav>
+      <a href="#xuong">Xưởng</a>
+      <a href="#dong-xe">Dòng xe</a>
+      <a href="#dat-dong">Đặt đóng riêng</a>
+      <a href="#nhat-ky">Nhật ký xưởng</a>
+      <a href="#lien-he">Liên hệ</a>
+    </nav>
+    <a class="btn btn-primary" href="#lien-he" style="padding:10px 20px">Đặt lịch tư vấn</a>
+  </div>
+</header>
+
+<!-- (1) HERO -->
+<section class="hero">
+  <div class="hero-media">
+    <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=1800&q=80" alt="Ảnh mẫu: xe đạp khung thép trên đường làng buổi sớm, ánh sáng vàng nhạt">
+    <div class="hero-text">
+      <div class="wrap">
+        <p class="eyebrow">Xưởng xe đạp thủ công</p>
+        <h1>Gió Đồng — Xe đạp đóng tay, đi cả đời.</h1>
+        <p>Mỗi chiếc xe bắt đầu từ ống thép, bàn tay thợ và một người chủ sẽ đi cùng nó nhiều năm.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#lien-he">Đặt lịch tư vấn</a>
+          <a class="btn btn-ghost" href="#dong-xe">Xem ba dòng xe</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- (2) XƯỞNG -->
+<section id="xuong">
+  <div class="wrap two">
+    <div>
+      <img src="https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?auto=format&fit=crop&w=1400&q=80" alt="Ảnh mẫu: người thợ trong xưởng sáng, đang làm việc với xe đạp">
+      <p class="muted">Ảnh mẫu — xưởng sáng, tông ấm tự nhiên. Ảnh thật của xưởng sẽ thay thế khi có.</p>
+    </div>
+    <div>
+      <p class="eyebrow">Xưởng và người thợ</p>
+      <h2>Một chiếc xe, làm từ đầu đến cuối trong xưởng.</h2>
+      <ol class="steps">
+        <li><strong>Chọn ống thép</strong> — chọn vật liệu và kích cỡ khung theo người đi.</li>
+        <li><strong>Hàn khung</strong> — hàn tay từng mối, kiểm tra độ thẳng của khung.</li>
+        <li><strong>Sơn</strong> — sơn nhiều lớp, phơi khô tự nhiên trong xưởng sáng.</li>
+        <li><strong>Lắp ráp</strong> — lắp nan hoa, bánh, phanh và tay lái bằng tay.</li>
+        <li><strong>Chạy thử</strong> — kiểm tra chạy thử trước khi giao xe cho chủ mới.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- (3) BA DÒNG XE -->
+<section id="dong-xe">
+  <div class="wrap">
+    <p class="eyebrow">Ba dòng xe</p>
+    <h2>Chọn chiếc xe hợp với đường bạn đi mỗi ngày.</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=1200&q=80" alt="Ảnh mẫu: xe phố chụp nghiêng toàn thân, nền sáng">
+        <div class="card-body">
+          <span class="tag">Thủ công</span>
+          <h3>Xe phố</h3>
+          <p>Nhẹ, dáng thẳng, hợp đi làm và đi chợ mỗi ngày trong phố.</p>
+          <p class="price">Giá mẫu: 12.900.000 VNĐ</p>
+          <p class="muted">Giá mẫu để dựng bố cục — giá bán thật: [CẦN BỔ SUNG].</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?auto=format&fit=crop&w=1200&q=80" alt="Ảnh mẫu: xe touring chụp nghiêng toàn thân, nền sáng">
+        <div class="card-body">
+          <span class="tag">Thủ công</span>
+          <h3>Xe touring</h3>
+          <p>Khung chắc, chở được đồ, hợp những chuyến đi dài cuối tuần.</p>
+          <p class="price">Giá mẫu: 18.500.000 VNĐ</p>
+          <p class="muted">Giá mẫu để dựng bố cục — giá bán thật: [CẦN BỔ SUNG].</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1200&q=80" alt="Ảnh mẫu: xe đua cổ điển chụp nghiêng toàn thân, nền sáng">
+        <div class="card-body">
+          <span class="tag">Thủ công</span>
+          <h3>Xe đua cổ điển</h3>
+          <p>Dáng cổ điển châu Âu, khung thép mảnh, dành cho người thích tốc độ và vẻ đẹp xưa.</p>
+          <p class="price">Giá mẫu: 24.900.000 VNĐ</p>
+          <p class="muted">Giá mẫu để dựng bố cục — giá bán thật: [CẦN BỔ SUNG].</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- (4) ĐẶT ĐÓNG RIÊNG -->
+<section id="dat-dong" class="dark-section">
+  <div class="wrap">
+    <p class="eyebrow">Đặt đóng riêng</p>
+    <h2>Chiếc xe làm riêng cho một người: bạn.</h2>
+    <div class="steps-grid">
+      <div class="step"><p class="step-num">01</p><h3>Đo người</h3><p>Đo chiều cao, sải tay và tư thế ngồi để tính kích cỡ khung vừa nhất.</p></div>
+      <div class="step"><p class="step-num">02</p><h3>Chọn khung</h3><p>Chọn ống thép, màu sơn và chi tiết theo ý bạn, thợ tư vấn trực tiếp.</p></div>
+      <div class="step"><p class="step-num">03</p><h3>Lắp ráp</h3><p>Xưởng hàn, sơn và lắp ráp hoàn thiện, rồi mời bạn chạy thử trước khi nhận xe.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- (5) NHẬT KÝ XƯỞNG -->
+<section id="nhat-ky">
+  <div class="wrap">
+    <p class="eyebrow">Nhật ký xưởng</p>
+    <h2>Hôm nay trong xưởng có gì.</h2>
+    <div class="journal">
+      <figure style="margin:0"><img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?auto=format&fit=crop&w=1000&q=80" alt="Ảnh mẫu: khung thép xe đạp"><figcaption>Khung thép vừa sơn xong</figcaption></figure>
+      <figure style="margin:0"><img src="https://images.unsplash.com/photo-1593764592116-bfb2a97c642a?auto=format&fit=crop&w=1000&q=80" alt="Ảnh mẫu: bánh xe và nan hoa"><figcaption>Lắp nan hoa bằng tay</figcaption></figure>
+      <figure style="margin:0"><img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=1000&q=80" alt="Ảnh mẫu: xe đạp hoàn thiện ngoài nắng sớm"><figcaption>Xe hoàn thiện, chờ chạy thử buổi sớm</figcaption></figure>
+    </div>
+    <p class="muted">Tất cả ảnh trên trang này đều là ảnh mẫu, đồng tông ấm sáng tự nhiên, chờ ảnh thật của xưởng Gió Đồng.</p>
+  </div>
+</section>
+
+<!-- (6) FORM LIÊN HỆ -->
+<section id="lien-he" class="dark-section">
+  <div class="wrap">
+    <p class="eyebrow">Liên hệ</p>
+    <h2>Đặt lịch tư vấn — chỉ mất một phút.</h2>
+    <form id="contact-form">
+      <label for="name">Họ tên</label>
+      <input id="name" name="name" type="text" placeholder="Tên của bạn" required>
+      <label for="phone">Số điện thoại</label>
+      <input id="phone" name="phone" type="tel" placeholder="Số điện thoại của bạn" required>
+      <label for="line">Dòng xe quan tâm</label>
+      <select id="line" name="line">
+        <option>Xe phố</option>
+        <option>Xe touring</option>
+        <option>Xe đua cổ điển</option>
+        <option>Đặt đóng riêng</option>
+      </select>
+      <label for="msg">Lời nhắn</label>
+      <textarea id="msg" name="msg" rows="4" placeholder="Bạn muốn xe cho nhu cầu nào?"></textarea>
+      <button class="btn btn-primary" type="submit">Gửi yêu cầu tư vấn</button>
+      <p id="form-note" class="muted" hidden>Đã ghi nhận mẫu — form này chỉ là giao diện, chưa gửi dữ liệu đi đâu.</p>
+    </form>
+    <div class="note">
+      <p style="margin:0"><strong>Form mẫu</strong> — form trên chỉ là giao diện, chưa gửi dữ liệu đi đâu. [CẦN BỔ SUNG] địa chỉ xưởng, số điện thoại và email thật của Gió Đồng.</p>
+    </div>
+    <p class="muted">Địa chỉ xưởng: [CẦN BỔ SUNG] · Điện thoại: [CẦN BỔ SUNG] · Email: [CẦN BỔ SUNG]</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p style="margin:0">Gió Đồng — Xe đạp đóng tay, đi cả đời. Trang mẫu theo DESIGN.md (TEC-254). Ảnh mẫu, giá mẫu; thông tin thật: [CẦN BỔ SUNG].</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault(); // CHỈ giao diện: không gửi dữ liệu thật đi đâu.
+  document.getElementById('form-note').hidden = false;
+});
+</script>
+</body>
+</html>
